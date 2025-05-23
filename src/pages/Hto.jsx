@@ -252,7 +252,7 @@ const Hto = () => {
           </div>
         </section>
 
-        <section classNa  me='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[100vh]'>
+        <section className='lg:px-20 px-5 pt-20  last-sec flex flex-col justify-center items-center pb-32 lg:min-h-[100vh]'>
           <div className='flex flex-col justify-center items-center gap-8'>
             <h1 className='text-white text-4xl lg:text-6xl' style={{ fontFamily: 'Minion Pro, serif' }}>
               Get Started Today
