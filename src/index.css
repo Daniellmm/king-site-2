@@ -42,6 +42,34 @@
     background-size: cover;
     background-position: center;
 }
+.phero-sec {
+    background-image: url(../src/assets/images/page-two/heroBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.psec-two {
+    background-image: url(../src/assets/images/page-two/sectwo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.podcast-sec {
+    background-image: url(../src/assets/images/page-two/podcastBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.about-sec {
+    background-image: url(../src/assets/images/page-two/about.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
 
 @font-face {
     font-family: 'Minion Pro';
