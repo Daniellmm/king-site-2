@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { delay, motion } from 'framer-motion'
 import Navbar from '../components/Navbar'
 import KING1 from '../assets/images/page-two/hero.png'
 import KING2 from '../assets/images/page-two/aboutImg.png'
@@ -13,23 +13,23 @@ import YOUTUBE from '../assets/images/page-two/youtubeLogo.png'
 const PodcastPage = () => {
   // Animation variants
   const fadeInUp = {
-    hidden: { opacity: 0, y: 60 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
   }
 
   const fadeInLeft = {
     hidden: { opacity: 0, x: -60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
   }
 
   const fadeInRight = {
     hidden: { opacity: 0, x: 60 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
   }
 
   const scaleIn = {
     hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } }
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, delay: 0.3, ease: "easeOut" } }
   }
 
   const staggerContainer = {
@@ -72,7 +72,7 @@ const PodcastPage = () => {
             variants={staggerContainer}
           >
             {/* First part */}
-            <motion.div
+            <div
               className='flex flex-col justify-center items-center gap-9'
               variants={fadeInLeft}
             >
@@ -114,30 +114,24 @@ const PodcastPage = () => {
                   </motion.button>
                 </motion.div>
               </motion.div>
-            </motion.div>
+            </div>
 
             {/* Second part */}
             <motion.div
               className='flex lg:justify-start lg:items-start justify-center items-center w-full'
               variants={fadeInRight}
             >
-              <motion.img
+              <img
                 src={KING1}
                 alt=""
-                whileHover={imageHover}
+                // whileHover={imageHover}
               />
             </motion.div>
           </motion.div>
         </section>
 
         {/* Book Section */}
-        <motion.section
-          className='psec-two lg:px-40 px-5'
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
-        >
+        <section className='psec-two lg:px-40 px-5'>
           <div className='flex flex-col lg:flex-row w-full items-center justify-center'>
             <motion.div
               className='lg:w-1/4 pt-10 space-y-5'
@@ -181,16 +175,10 @@ const PodcastPage = () => {
               />
             </motion.div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Podcast Videos Section */}
-        <motion.section
-          className='podcast-sec lg:px-40 px-5'
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={staggerContainer}
-        >
+        <section className='podcast-sec lg:px-40 px-5'>
           <div className='flex flex-col pt-20 w-full items-center justify-center'>
             <motion.div variants={fadeInUp}>
               <h1 className='text-4xl lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
@@ -245,16 +233,10 @@ const PodcastPage = () => {
               </motion.div>
             </motion.div>
           </div>
-        </motion.section>
+        </section>
 
         {/* About Section */}
-        <motion.section
-          className='about-sec lg:px-40 px-5'
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          variants={staggerContainer}
-        >
+        <section className='about-sec lg:px-40 px-5'>
           <div className='flex flex-col justify-center items-center'>
             <motion.div variants={fadeInUp}>
               <h1 className='text-4xl pt-20 lg:text-6xl pb-10 text-center lg:text-start font-bold text-[#D09A25]'
@@ -275,6 +257,7 @@ const PodcastPage = () => {
               <motion.div
                 className='text-[#D09A25] text-4xl pt-8 lg:text-6xl text-center'
                 variants={fadeInUp}
+                 style={{ fontFamily: 'Beauty Wind, serif' }}
               >
                 <h1>King Edwards,</h1>
                 <h1>A Visionary Led by Faith</h1>
@@ -381,7 +364,7 @@ const PodcastPage = () => {
               </motion.div>
             </div>
           </div>
-        </motion.section>
+        </section>
       </main>
     </>
   )

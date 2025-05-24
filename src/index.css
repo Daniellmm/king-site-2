@@ -93,6 +93,20 @@
 }
 
 @font-face {
+    font-family: 'Beauty Wind';
+    src: url('/src/assets/fonts/beauty-Wind.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Beauty Wind';
+    src: url('/src/assets/fonts/beauty-Wind.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Montserrat';
     src: url('/src/assets/fonts/Montserrat-Black.ttf') format('truetype');
     font-weight: 900;
