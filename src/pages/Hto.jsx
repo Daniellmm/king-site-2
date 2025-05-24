@@ -33,6 +33,22 @@ const Hto = () => {
     }
   };
 
+  const lineVariant2 = {
+    hidden: { scaleY: -2 },
+    visible: {
+      scaleY: 1,
+      // transition: { duration: 0.8, ease: 'easeInOut' }
+    }
+  };
+
+  const dotVariant2 = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      // transition: { delay: 0.15 }
+    }
+  };
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 0) => ({
@@ -44,6 +60,14 @@ const Hto = () => {
         ease: 'easeOut',
       },
     }),
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 40 },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
   };
 
   const scaleFade = {
@@ -331,15 +355,37 @@ const Hto = () => {
 
               <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
                 <div>
-                  <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>
+                  <motion.h1
+                    variants={fadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className='text-white'
+                    style={{ fontFamily: 'Minion Pro, serif' }}>
                     Business owners looking to scale
-                  </h1>
+                  </motion.h1>
                 </div>
 
                 <div>
                   <div className='flex flex-col-reverse justify-center items-center'>
-                    <div className='border-[#D09A25] rounded-full size-7 border-2'></div>
-                    <div className='border-[#D09A25] h-20 border'></div>
+                    <motion.div
+                      variants={dotVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.2, duration: 0.4, ease: 'easeInOut' }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] rounded-full size-7 border-2'>
+                    </motion.div>
+
+                    <motion.div
+                      variants={lineVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.3, duration: 0.3, }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] h-20 border'>
+                    </motion.div>
                   </div>
                 </div>
               </div>
@@ -347,53 +393,126 @@ const Hto = () => {
 
               <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
                 <div>
-                  <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>
-                    Business owners looking to scale
-                  </h1>
+                  <motion.h1
+                    variants={fadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ delay: 0.4 }}
+                    viewport={{ once: true }}
+                    className='text-white'
+                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    Entrepreneurs needing fast capital
+                  </motion.h1>
                 </div>
 
                 <div>
                   <div className='flex flex-col justify-center items-center'>
-                    <div className='border-[#D09A25] rounded-full size-7 border-2'></div>
-                    <div className='border-[#D09A25] h-20 border'></div>
+                    <motion.div
+                      variants={dotVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.4, duration: 0.6, ease: 'easeInOut' }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] rounded-full size-7 border-2'>
+                    </motion.div>
+
+                    <motion.div
+                      variants={lineVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.4, duration: 0.4, }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] h-20 border'>
+                    </motion.div>
                   </div>
                 </div>
               </div>
 
               <div className='flex flex-row-reverse lg:flex-row justify-center items-center gap-10'>
                 <div>
-                  <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>
-                    Business owners looking to scale
-                  </h1>
+                  <motion.h1
+                    variants={fadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    transition={{ delay: 0.6 }}
+                    viewport={{ once: true }}
+                    className='text-white'
+                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    Individuals who want to leverage credit smartly
+                  </motion.h1>
                 </div>
 
                 <div>
                   <div className='flex flex-col-reverse justify-center items-center'>
-                    <div className='border-[#D09A25] rounded-full size-7 border-2'></div>
-                    <div className='border-[#D09A25] h-20 border'></div>
+                    <motion.div
+                      variants={dotVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.6, duration: 0.6, ease: 'easeInOut' }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] rounded-full size-7 border-2'>
+                    </motion.div>
+
+                    <motion.div
+                      variants={lineVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.5, duration: 0.5, }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] h-20 border'>
+                    </motion.div>
                   </div>
                 </div>
               </div>
 
               <div className='flex lg:hidden flex-row-reverse lg:flex-row justify-center items-center gap-10'>
                 <div>
-                  <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>
-                    Business owners looking to scale
-                  </h1>
+                  <motion.h1
+                    variants={fadeInRight}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.8 }}
+                    className='text-white'
+                    style={{ fontFamily: 'Minion Pro, serif' }}>
+                    Anyone seeking extra liquidity without disrupting their credit usage
+                  </motion.h1>
                 </div>
 
                 <div>
                   <div className='flex flex-col justify-center items-center'>
-                    <div className='border-[#D09A25] rounded-full size-7 border-2'></div>
-                    <div className='border-[#D09A25] h-20 border'></div>
+                    <motion.div
+                      variants={dotVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.8, duration: 0.25, ease: 'easeInOut' }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] rounded-full size-7 border-2'>
+                    </motion.div>
+
+                    <motion.div
+                      variants={lineVariant2}
+                      initial="hidden"
+                      whileInView="visible"
+                      transition={{ delay: 0.6, duration: 0.6, }}
+                      viewport={{ once: true }}
+                      className='border-[#D09A25] h-20 border'>
+                    </motion.div>
                   </div>
                 </div>
               </div>
 
               <div className='hidden lg:block'>
-                <h1 className='text-white' style={{ fontFamily: 'Minion Pro, serif' }}>
-                  Business owners looking to scale
-                </h1>
+                <motion.h1
+                  variants={fadeInRight}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 }}
+                  className='text-white'
+                  style={{ fontFamily: 'Minion Pro, serif' }}>
+                  Anyone seeking extra liquidity <br /> without disrupting their credit usage
+                </motion.h1>
               </div>
             </div>
 
