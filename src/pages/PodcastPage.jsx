@@ -94,7 +94,7 @@ const PodcastPage = () => {
                   variants={fadeInUp}
                 >
                   <motion.button
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="px-6 py-2 text-sm rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -106,7 +106,7 @@ const PodcastPage = () => {
                   variants={fadeInUp}
                 >
                   <motion.button
-                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
+                    className="px-3 py-2 rounded-full text-sm bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                   >
