@@ -94,7 +94,7 @@ const PodcastPage = () => {
                   variants={fadeInUp}
                 >
                   <motion.button
-                    className='text-black bg-orange-400 text-sm lg:text-lg rounded-3xl py-2 px-4'
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -106,7 +106,7 @@ const PodcastPage = () => {
                   variants={fadeInUp}
                 >
                   <motion.button
-                    className='text-black bg-orange-400 text-sm lg:text-lg rounded-3xl py-2 px-4'
+                    className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                     whileHover={buttonHover}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -158,7 +158,7 @@ const PodcastPage = () => {
                 variants={fadeInUp}
               >
                 <motion.button
-                  className='text-black bg-orange-400 text-sm lg:text-lg rounded-3xl py-2 px-4'
+                  className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300"
                   whileHover={buttonHover}
                   whileTap={{ scale: 0.95 }}
                 >

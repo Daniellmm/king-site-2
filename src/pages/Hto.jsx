@@ -126,7 +126,9 @@ const Hto = () => {
                   viewport={{ once: true }}
                   custom={2}
                 >
-                  <button className='text-black bg-orange-400 rounded-3xl py-2 px-4'>Book Now</button>
+                  <button className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                    Book Now
+                  </button>
                 </motion.div>
               </div>
 
@@ -168,7 +170,7 @@ const Hto = () => {
 
             <div className=''>
               <motion.div
-                className='lg:w-[500px] w-[400px] h-[300px] bg-[#999999]'
+                className='lg:w-[500px] w-[340px] h-[250px] bg-[#999999]'
                 variants={scaleFade}
                 initial="hidden"
                 whileInView="visible"
@@ -551,7 +553,9 @@ const Hto = () => {
               viewport={{ once: true }}
               custom={2}
             >
-              <button className='text-black bg-orange-400 rounded-3xl py-2 px-4'>Book Now</button>
+              <button className="px-6 py-2 rounded-full bg-gradient-to-r from-[#a47e3b] via-[#c1a875] to-[#e1c78a] text-black font-semibold shadow-inner hover:shadow-lg transition duration-300">
+                Book Now
+              </button>
             </motion.div>
 
 
