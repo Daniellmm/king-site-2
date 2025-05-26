@@ -9,6 +9,7 @@ import FACEBOOK from '../assets/images/page-two/faceLogo.png'
 import X from '../assets/images/page-two/xLogo.png'
 import INSTAGRAM from '../assets/images/page-two/instagramLogo.png'
 import YOUTUBE from '../assets/images/page-two/youtubeLogo.png'
+import HeroModel from '../components/HeroModel'
 
 const PodcastPage = () => {
   // Animation variants
@@ -124,15 +125,15 @@ const PodcastPage = () => {
               <img
                 src={KING1}
                 alt=""
-                // whileHover={imageHover}
+              // whileHover={imageHover}
               />
             </motion.div>
           </motion.div>
         </section>
 
         {/* Book Section */}
-        <section className='psec-two lg:px-40 px-5'>
-          <div className='flex flex-col lg:flex-row w-full items-center justify-center'>
+        <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[0] lg:pb-10'>
+          <div className='flex flex-col lg:flex-row w-full items-center justify-start'>
             <motion.div
               className='lg:w-1/4 pt-10 space-y-5'
               variants={fadeInLeft}
@@ -167,13 +168,22 @@ const PodcastPage = () => {
               </motion.div>
             </motion.div>
 
-            <motion.div variants={fadeInRight}>
+            {/* <motion.div variants={fadeInRight}>
               <motion.img
                 src={BOOK}
                 alt=""
                 whileHover={imageHover}
               />
-            </motion.div>
+            </motion.div> */}
+
+            {/* 3D model of the book */}
+            <figure className=''>
+              <div className='lg:w-[50%] mt-10 w-full min-h-[33vh] border-2 border-red-300 absolute lg:top-0  xl:right-0 right-0'>
+                <HeroModel />
+              </div>
+            </figure>
+
+
           </div>
         </section>
 
@@ -257,7 +267,7 @@ const PodcastPage = () => {
               <motion.div
                 className='text-[#D09A25] text-4xl pt-8 lg:text-6xl text-center'
                 variants={fadeInUp}
-                 style={{ fontFamily: 'Beauty Wind, serif' }}
+                style={{ fontFamily: 'Beauty Wind, serif' }}
               >
                 <h1>King Edwards,</h1>
                 <h1>A Visionary Led by Faith</h1>
