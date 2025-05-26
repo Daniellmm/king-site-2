@@ -14,13 +14,13 @@ const HeroModel = () => {
     const isTablet = useMediaQuery({ query: '(max-width: 1024px)' });
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
     const containerRef = useRef(null);
-
+    
     return (
         <div ref={containerRef} style={{ width: '100%', height: '100%' }}>
-            <Canvas
-                camera={{
-                    position: [0, 0, 12],
-                    fov: isMobile ? 35 : 55
+            <Canvas 
+                camera={{ 
+                    position: [0, 0, 12], 
+                    fov: isMobile ? 35 : 55 
                 }}
                 style={{ width: '100%', height: '100%' }}
             >
@@ -35,7 +35,7 @@ const HeroModel = () => {
                     enableDamping={true}
                     dampingFactor={0.05}
                 />
-
+                
                 <ambientLight intensity={0.6} color="#f4f4f4" />
                 <directionalLight
                     position={[5, 5, 5]}
@@ -48,8 +48,8 @@ const HeroModel = () => {
                     intensity={0.5}
                     color="#ffffff"
                 />
-
-                <GSAPScrollBook
+                
+                <GSAPScrollBook 
                     containerRef={containerRef}
                     isMobile={isMobile}
                     isTablet={isTablet}
@@ -63,7 +63,7 @@ const HeroModel = () => {
 const GSAPScrollBook = ({ containerRef, isMobile, isTablet }) => {
     const groupRef = useRef();
     const rotationData = useRef({ x: 0, y: 0 });
-
+    
     useEffect(() => {
         if (containerRef.current && groupRef.current) {
             const tl = gsap.timeline({
@@ -71,48 +71,38 @@ const GSAPScrollBook = ({ containerRef, isMobile, isTablet }) => {
                     trigger: containerRef.current,
                     start: "top bottom",
                     end: "bottom top",
-                    scrub: 1,
+                    scrub: 1, // Smooth scrubbing
                     onUpdate: (self) => {
                         rotationData.current.y = self.progress * Math.PI * 2;
                         rotationData.current.x = self.progress * Math.PI / 4;
                     }
                 }
             });
-
+            
             return () => {
                 ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             };
         }
     }, [containerRef]);
-
+    
     useFrame(() => {
         if (groupRef.current) {
             groupRef.current.rotation.y = rotationData.current.y;
             groupRef.current.rotation.x = rotationData.current.x;
         }
     });
-
+    
     return (
         <group
             ref={groupRef}
             scale={isMobile ? 5 : isTablet ? 6 : 8}
             position={
-                isMobile
-                    ? [0, -3, -1]
-                    : isTablet
-                        ? [1, -0.5, 0]
-                        : [1, -5, 0]
+                isMobile 
+                    ? [0, -3, 0]        
+                    : isTablet 
+                    ? [1, -0.5, 0]      
+                    : [1, -5, 0]         
             }
-            rotation={
-                isMobile
-                    ?
-                    [0, 0, 0.1]
-                    :
-                    isTablet
-                        ?
-                        [0, -Math.PI / 4, 0]
-                        :
-                        [0, -Math.PI / 2, 0]}
         >
             <Book />
         </group>
