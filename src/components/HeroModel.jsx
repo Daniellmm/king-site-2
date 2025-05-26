@@ -18,7 +18,8 @@ const HeroModel = () => {
         >
             <OrbitControls
                 enablePan={false}
-                enableZoom={true}
+                enableZoom={!isTablet}
+                // enableZoom={true}
                 maxDistance={15}
                 minDistance={5}
                 minPolarAngle={Math.PI / 6}
