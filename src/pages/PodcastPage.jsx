@@ -132,10 +132,10 @@ const PodcastPage = () => {
         </section>
 
         {/* Book Section */}
-        <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[0] lg:pb-10'>
-          <div className='flex flex-col lg:flex-row w-full items-center justify-start'>
+        <section className='psec-two relative lg:px-40 px-5 min-h-[100vh] lg:min-h-[80vh] lg:pb-10'>
+          <div className='flex flex-col lg:flex-row w-full items-center justify-between h-full'>
             <motion.div
-              className='lg:w-1/4 pt-10 space-y-5'
+              className='lg:w-1/2 pt-10 space-y-5 z-10'
               variants={fadeInLeft}
             >
               <motion.h1
@@ -168,25 +168,17 @@ const PodcastPage = () => {
               </motion.div>
             </motion.div>
 
-            {/* <motion.div variants={fadeInRight}>
-              <motion.img
-                src={BOOK}
-                alt=""
-                whileHover={imageHover}
-              />
-            </motion.div> */}
-
-            {/* 3D model of the book */}
-            <figure className=''>
-              <div className='lg:w-[50%] mt-10 w-full min-h-[33vh] border-2 border-red-300 absolute lg:top-0  xl:right-0 right-0'>
+            {/* 3D model of the book - Updated container */}
+            <motion.div 
+              className='lg:w-1/2 w-full h-[50vh] lg:h-[70vh] relative'
+              variants={fadeInRight}
+            >
+              <div className='w-full h-full'>
                 <HeroModel />
               </div>
-            </figure>
-
-
+            </motion.div>
           </div>
         </section>
-
         {/* Podcast Videos Section */}
         <section className='podcast-sec lg:px-40 px-5'>
           <div className='flex flex-col pt-20 w-full items-center justify-center'>
