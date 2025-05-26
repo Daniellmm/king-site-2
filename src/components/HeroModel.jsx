@@ -24,17 +24,19 @@ const HeroModel = () => {
                 }}
                 style={{ width: '100%', height: '100%' }}
             >
-                <OrbitControls
-                    enablePan={false}
-                    enableZoom={!isTablet}
-                    maxDistance={15}
-                    minDistance={5}
-                    minPolarAngle={Math.PI / 6}
-                    maxPolarAngle={Math.PI / 1.5}
-                    autoRotate={false}
-                    enableDamping={true}
-                    dampingFactor={0.05}
-                />
+                {!isMobile && (
+                    <OrbitControls
+                        enablePan={false}
+                        enableZoom={!isTablet}
+                        maxDistance={15}
+                        minDistance={5}
+                        minPolarAngle={Math.PI / 6}
+                        maxPolarAngle={Math.PI / 1.5}
+                        autoRotate={false}
+                        enableDamping={true}
+                        dampingFactor={0.05}
+                    />
+                )}
 
                 <ambientLight intensity={0.6} color="#f4f4f4" />
                 <directionalLight
